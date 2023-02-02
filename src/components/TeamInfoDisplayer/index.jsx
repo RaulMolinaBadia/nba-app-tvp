@@ -1,10 +1,11 @@
 import React from 'react'
 import { Teams, TeamInfo, Image } from './styles'
-import TeamsList from '../../public/nbaLogos'
+import TeamsList from '../../data/nbaLogos'
+import useHandlerTeams from '../../api/teams'
 // import Link from 'next/link'
-
+const teamsURL = 'https://www.balldontlie.io/api/v1/teams'
 const TeamInfoDisplayer = props => {
-  const teams = props.teams.teams.data
+  const teams = useHandlerTeams(teamsURL)
 
   return (
     <Teams>
@@ -15,18 +16,18 @@ const TeamInfoDisplayer = props => {
         )
         return (
           <TeamInfo key={i}>
-            <a href={`/teams/${teamName}`}>
-              {findTeam
-                ? (
-                  <Image
-                    src={findTeam.logo.src}
-                    alt={team.name}
-                    height={200}
-                    width={200}
-                  />
-                  )
-                : null}
-            </a>
+            {/* <a href={`/teams/${teamName}`}> */}
+            {findTeam
+              ? (
+                <Image
+                  src={findTeam.logo}
+                  alt={team.name}
+                  height={200}
+                  width={200}
+                />
+                )
+              : null}
+            {/* </a> */}
             <div>{team.full_name}</div>
             <div>Divsion: {team.division}</div>
             <div>Conference: {team.conference}</div>

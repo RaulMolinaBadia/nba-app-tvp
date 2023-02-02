@@ -2,6 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './pages/landingPage'
+// import App from './pages/home.jsx'
+// import App from './pages/teams'
+// import App from './pages/news'
 import reportWebVitals from './reportWebVitals'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))

@@ -1,6 +1,6 @@
 import React from 'react'
 // import Link from 'next/link'
-import TeamsList from '../../public/nbaLogos'
+import TeamsList from '../../data/nbaLogos'
 import { TeamListBarWrapper, Logo } from './styles'
 
 const TeamListBar = () => {
@@ -10,7 +10,7 @@ const TeamListBar = () => {
         <div key={team.name}>
           <a href={`/teams/${team.name}`}>
             <Logo
-              src={team.logo.src} alt={team.name}
+              src={team.logo} alt={team.name}
             />
           </a>
         </div>

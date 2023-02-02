@@ -1,5 +1,5 @@
 import React from 'react'
-import TeamsList from '../../../public/nbaLogos'
+import TeamsList from '../../../data/nbaLogos'
 import { useDataAPI } from '../../../api/data'
 import {
   ConferenceHeader,
@@ -32,7 +32,7 @@ const WesternLeaderboard = () => {
                 {findTeam
                   ? (
                     <Image
-                      src={findTeam.logo.src}
+                      src={findTeam.logo}
                       alt={team.name}
                       width={30}
                       height={30}

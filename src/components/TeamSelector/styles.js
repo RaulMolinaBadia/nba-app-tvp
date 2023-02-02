@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 export const TeamSelectorContainer = styled.div`
-  width: 27%;
-  height: 57vh;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   text-align: center;
