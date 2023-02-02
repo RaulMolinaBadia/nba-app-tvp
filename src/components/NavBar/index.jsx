@@ -1,6 +1,6 @@
 // import Link from 'next/link'
 import React from 'react'
-import TeamsList from '../../public/nbaLogos'
+import TeamsList from '../../data/nbaLogos'
 
 import {
   MenuBarWrapper,
