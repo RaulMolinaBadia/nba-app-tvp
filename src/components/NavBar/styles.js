@@ -49,4 +49,4 @@ export const ListMenuItem = styled.li`
 export const Image = styled.img`
     width: 100px;
     height: 60px;
-`;
+`
