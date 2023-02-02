@@ -1,7 +1,6 @@
 // import Link from 'next/link'
 import React from 'react'
 import TeamsList from '../../data/nbaLogos'
-
 import {
   MenuBarWrapper,
   NavBarLeft,
@@ -21,6 +20,7 @@ const NavBar = props => {
       team => team.name === teamName[teamName.length - 1]
     )
   }
+  console.log(teamLogo.logo)
   return (
     <MenuBarWrapper>
       <NavBarLeft>

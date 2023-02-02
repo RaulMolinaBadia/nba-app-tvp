@@ -1,9 +1,14 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import axios from 'axios'
+import { useState, useEffect } from 'react'
 
-const url = 'https://www.balldontlie.io/api/v1/teams'
-export default function handler (req, res) {
-  axios.get(url).then(response => {
-    res.status(200).json(response.data)
-  })
+export default function useHandlerTeams (apiURL) {
+  const [post, setPost] = useState([])
+  useEffect(() => {
+    fetch(apiURL)
+      .then(response => response.json())
+      .then(data => {
+        setPost(data.data)
+      })
+  }, [!post])
+  console.log(post)
+  return post
 }

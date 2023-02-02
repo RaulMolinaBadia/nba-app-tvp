@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export default function handlerTeam (req, res) {
+export default function handlerNews (req, res) {
   const headersList = {
     Accept: '*/*',
     'User-Agent': 'Thunder Client (https://www.thunderclient.com)',

@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react'
 
 export const useDataAPI = apiURL => {
   const [post, setPost] = useState([])
-
   useEffect(() => {
     fetch(apiURL)
       .then(response => response.json())
       .then(data => {
+        console.log('a')
         setPost(data.data)
       })
   }, [!post])
