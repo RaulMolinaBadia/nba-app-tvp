@@ -1,5 +1,4 @@
 import React from 'react'
-// import Link from 'next/link'
 import TeamsList from '../../public/nbaLogos'
 import { TeamListBarWrapper, Logo } from './styles'
 
