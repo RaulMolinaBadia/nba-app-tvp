@@ -13,7 +13,7 @@ import {
 } from './styles.js'
 
 const NavBar = props => {
-  const [currentPage, setCurrentPage] = useState('landingPage')
+  const [currentPage, setCurrentPage] = useState('')
   // const teamName = props.teamName.split(' ')
   // let teamLogo = ''
   // if (teamName[0] === 'Logo-NBA') {
