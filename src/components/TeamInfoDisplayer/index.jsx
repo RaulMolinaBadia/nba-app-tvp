@@ -1,7 +1,7 @@
 import React from 'react'
 import { Teams, TeamInfo, Image } from './styles'
 import TeamsList from '../../public/nbaLogos'
-import Link from 'next/link'
+// import Link from 'next/link'
 
 const TeamInfoDisplayer = props => {
   const teams = props.teams.teams.data
@@ -15,7 +15,7 @@ const TeamInfoDisplayer = props => {
         )
         return (
           <TeamInfo key={i}>
-            <Link href={`/teams/${teamName}`}>
+            <a href={`/teams/${teamName}`}>
               {findTeam
                 ? (
                   <Image
@@ -26,7 +26,7 @@ const TeamInfoDisplayer = props => {
                   />
                   )
                 : null}
-            </Link>
+            </a>
             <div>{team.full_name}</div>
             <div>Divsion: {team.division}</div>
             <div>Conference: {team.conference}</div>

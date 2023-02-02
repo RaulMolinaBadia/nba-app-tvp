@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDataAPI } from '../../api/data'
 import { PlayerInfo, Name, Title } from './styles'
-import Link from 'next/link'
+// import Link from 'next/link'
 
 const playersURL = 'https://www.balldontlie.io/api/v1/players'
 
@@ -13,9 +13,9 @@ const GetPlayers = (team) => {
       <Title>LINE-UP</Title>
       {filteredPlayers.map((player, i) => (
         <PlayerInfo key={i}>
-          <Link href={`/players/${player.first_name}${player.last_name}`}>
+          <a href={`/players/${player.first_name}${player.last_name}`}>
             <Name>{player.first_name} {player.last_name}</Name>
-          </Link>
+          </a>
         </PlayerInfo>
       ))}
     </div>

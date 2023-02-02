@@ -1,4 +1,4 @@
-import Link from 'next/link'
+// import Link from 'next/link'
 import React from 'react'
 import TeamsList from '../../public/nbaLogos'
 
@@ -24,22 +24,22 @@ const NavBar = props => {
   return (
     <MenuBarWrapper>
       <NavBarLeft>
-        <Link href='/'>
+        <a href='/'>
           <Image
             src='/app-logo/Logo-NBA.png'
             alt='logo NBA'
             width={100}
             height={60}
           />
-        </Link>
+        </a>
       </NavBarLeft>
       <NavBarRight>
         <ListMenu>
           <ListMenuItem>
-            <Link href='/teams'>Teams</Link>
+            <a href='/teams'>Teams</a>
           </ListMenuItem>
           <ListMenuItem>
-            <Link href='/news'>News</Link>
+            <a href='/news'>News</a>
           </ListMenuItem>
         </ListMenu>
         {teamLogo === 'Logo-NBA'
