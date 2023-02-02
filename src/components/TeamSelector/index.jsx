@@ -1,17 +1,21 @@
-import React from 'react'
 import { TeamSelectorContainer, Select } from './styles'
+// import Router from 'next/router'
 
 const TeamSelector = props => {
-  const teams = props.teams.teams.data
-  const handleChange = e => {
+  const teams = props.teams
+  const Redirect = e => {
     props.setTeamName(e.target.value)
+    // let teamSplited = e.target.value.split(' ')
+    // teamSplited = teamSplited[teamSplited.length - 1]
+    // Router.push(`/home/${teamSplited}`)
   }
-
   return (
     <TeamSelectorContainer>
       <Select
         data-testid='teams'
-        onChange={handleChange}
+        onChange={e => {
+          Redirect(e)
+        }}
         id='teams'
       >
         {teams.map((team, i) => (
