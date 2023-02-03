@@ -2,7 +2,7 @@ import React from 'react'
 import { TeamSelectorContainer, Select } from './styles'
 import useHandlerTeams from '../api/teams'
 
-const TeamSelector = props => {
+const TeamSelector = () => {
   const teams = useHandlerTeams()
   const Redirect = e => {
     window.location.href = '/home'
