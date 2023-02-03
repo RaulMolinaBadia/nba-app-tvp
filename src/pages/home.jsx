@@ -1,3 +1,4 @@
+import React from 'react'
 import Footer from '../components/Footer/index'
 import Frame from '../components/Frame'
 import TeamListBar from '../components/TeamListBar'

@@ -1,19 +1,31 @@
+import { useState, React } from 'react'
 import TeamSelector from '../components/TeamSelector'
-import { useState } from 'react'
 import useHandlerTeams from '../api/teams'
 import NavBar from '../components/NavBar'
+import Home from './home'
+import Teams from './teams'
+import News from './news'
 
-const teamsURL = 'https://www.balldontlie.io/api/v1/teams'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 export default function LandingPage () {
   const [teamName, setTeamName] = useState('Hawks')
-  const teams = useHandlerTeams(teamsURL)
-  console.log(teams)
-  console.log(teamName)
+  const teams = useHandlerTeams()
   return (
     <div>
-      <NavBar teamName={teamName} />
-      <TeamSelector setTeamName={setTeamName} teams={teams} />
+      <Router>
+
+        <Routes>
+          <Route
+            path='/' element={<><NavBar teamName={teamName} />
+              <TeamSelector setTeamName={setTeamName} teams={teams} />
+            </>}
+          />
+          <Route path='/home' element={<Home />} />
+          <Route path='/teams' element={<Teams />} />
+          <Route path='/news' element={<News />} />
+        </Routes>
+      </Router>
     </div>
   )
 }

@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
 
-export default function useHandlerTeams (apiURL) {
+export default function useHandlerTeams () {
   const [post, setPost] = useState([])
   useEffect(() => {
-    fetch(apiURL)
+    fetch('https://www.balldontlie.io/api/v1/teams')
       .then(response => response.json())
       .then(data => {
         setPost(data.data)
       })
   }, [!post])
-  console.log(post)
   return post
 }
