@@ -14,12 +14,15 @@ export default function LandingPage () {
   return (
     <div>
       <Router>
-
         <Routes>
           <Route
-            path='/' element={<><NavBar teamName={teamName} />
-              <TeamSelector setTeamName={setTeamName} teams={teams} />
-            </>}
+            path='/'
+            element={
+              <>
+                <NavBar teamName={teamName} />
+                <TeamSelector setTeamName={setTeamName} teams={teams} />
+              </>
+            }
           />
           <Route path='/home' element={<Home />} />
           <Route path='/teams' element={<Teams />} />
