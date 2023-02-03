@@ -41,8 +41,8 @@ export const ListMenuItem = styled.li`
   padding: 10px;
   border-radius: 0.5rem;
   &:hover {
-    background-color: #ff00ff;
-    color: #fff;
+    background-color: #fbce00;
+    color: black;
   }
   margin-right: 0.9rem;
 `

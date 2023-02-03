@@ -9,7 +9,7 @@ export default function Home () {
     <div>
       <NavBar teamName='Logo-NBA' />
       <TeamListBar />
-      <Frame teamName='NEWS' news={[]} imagesUrls={[]} />
+      <Frame teamName='NEWS' />
       <Footer />
     </div>
   )

@@ -9,7 +9,7 @@ import {
   Image
 } from './styles.js'
 
-const NavBar = props => {
+const NavBar = () => {
   return (
     <MenuBarWrapper>
       <NavBarLeft>
@@ -25,12 +25,12 @@ const NavBar = props => {
       <NavBarRight>
         <ListMenu>
           <Link to='/teams'>
-            <ListMenuItem>
+            <ListMenuItem className='ListMenuItem'>
               Teams
             </ListMenuItem>
           </Link>
           <Link to='/news'>
-            <ListMenuItem>
+            <ListMenuItem className='ListMenuItem'>
               News
             </ListMenuItem>
           </Link>

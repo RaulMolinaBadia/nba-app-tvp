@@ -2,9 +2,8 @@ import React from 'react'
 import { Teams, TeamInfo, Image } from './styles'
 import TeamsList from '../../data/nbaLogos'
 import useHandlerTeams from '../../api/teams'
-// import Link from 'next/link'
 const teamsURL = 'https://www.balldontlie.io/api/v1/teams'
-const TeamInfoDisplayer = props => {
+const TeamInfoDisplayer = () => {
   const teams = useHandlerTeams(teamsURL)
 
   return (
@@ -16,7 +15,6 @@ const TeamInfoDisplayer = props => {
         )
         return (
           <TeamInfo key={i}>
-            {/* <a href={`/teams/${teamName}`}> */}
             {findTeam
               ? (
                 <Image

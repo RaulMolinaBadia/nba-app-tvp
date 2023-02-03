@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled'
 
 export const FooterContainer = styled.footer`
   background-color: #ffffff1f;
@@ -9,9 +9,9 @@ export const FooterContainer = styled.footer`
   height: 60px;
   padding-top: 5px;
   padding-bottom: 5px;
-`;
+`
 
 export const Image = styled.img`
     width: 88px;
     height: 50px;
-`;
+`

@@ -1,18 +1,22 @@
-import axios from 'axios'
+import { useState, useEffect } from 'react'
 
-export default function handlerNews (req, res) {
-  const headersList = {
-    Accept: '*/*',
-    'User-Agent': 'Thunder Client (https://www.thunderclient.com)',
-    'X-RapidAPI-Key': '8acd110f16msh8ab908907b8a392p1b1f53jsn59199f328434'
-  }
+export default function useHandlerNews () {
+  const [post, setPost] = useState([])
 
-  axios
-    .get('https://nba-latest-news.p.rapidapi.com/articles', {
+  useEffect(() => {
+    const headersList = {
+      Accept: '*/*',
+      'User-Agent': 'Thunder Client (https://www.thunderclient.com)',
+      'X-RapidAPI-Key': 'e8079d9059mshaf2885320dead3bp16650ejsne54672d3a921'
+    }
+    fetch('https://nba-latest-news.p.rapidapi.com/articles', {
       method: 'GET',
       headers: headersList
     })
-    .then(response => {
-      res.status(200).json(response.data)
-    })
+      .then(response => response.json())
+      .then(data => {
+        setPost(data)
+      })
+  }, [!post])
+  return post
 }

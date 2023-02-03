@@ -1,13 +1,11 @@
+import React from 'react'
 import { TeamSelectorContainer, Select } from './styles'
-// import Router from 'next/router'
+import useHandlerTeams from '../api/teams'
 
 const TeamSelector = props => {
-  const teams = props.teams
+  const teams = useHandlerTeams()
   const Redirect = e => {
-    props.setTeamName(e.target.value)
-    // let teamSplited = e.target.value.split(' ')
-    // teamSplited = teamSplited[teamSplited.length - 1]
-    // Router.push(`/home/${teamSplited}`)
+    window.location.href = '/home'
   }
   return (
     <TeamSelectorContainer>

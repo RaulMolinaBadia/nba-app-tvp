@@ -52,4 +52,4 @@ export const Position = styled.div`
 export const Image = styled.img`
     width: 30px;
     height: 30px;
-`;
+`
